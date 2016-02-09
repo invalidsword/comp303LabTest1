@@ -5,7 +5,7 @@ package labtest01;
  * Jar of peanut butter, package of pasta,
  * whatever.
  */
-public class Item
+public class Item implements Comparable<Item>
 {
 	private final String aName;
 	private final int aId;
@@ -46,5 +46,25 @@ public class Item
 	public int getPrice()
 	{
 		return aPrice;
+	}
+
+	//returns positive non-zero number if pItem.getId > this.getId 
+	@Override
+	public int compareTo(Item pItem)
+	{
+		return pItem.getId() - this.getId();
+	}
+	
+	@Override
+	public boolean equals(Object pObject)
+	{
+		if(pObject == null)
+			return false;
+		if(pObject.getClass() != this.getClass())
+			return false;
+		if (pObject == this)
+			return true;
+		return this.getId() == ((Item) pObject).getId();
+		
 	}
 }

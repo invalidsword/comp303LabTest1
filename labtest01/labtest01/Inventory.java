@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class Inventory
 {
 	private final String aName; // Unique
-	private final HashMap<Item, Integer> aInventory = new HashMap<>();
+	private final HashMap<Item, Integer> aInventory = new HashMap<Item, Integer>();
 	
 	/**
 	 * Creates a new inventory with no items in it,
@@ -75,5 +75,9 @@ public class Inventory
 		{
 			return 0;
 		}
+	}
+	
+	public HashMap<Item, Integer> getHashMap(){
+		return aInventory;
 	}
 }
