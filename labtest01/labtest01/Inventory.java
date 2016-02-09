@@ -2,6 +2,7 @@ package labtest01;
 
 import java.util.HashMap;
 //initial commit
+//another change
 /**
  * Represents the inventory of a 
  * physical grocery store.
